@@ -5,7 +5,7 @@ module.exports = (srv) => {
     // Reduce stock of ordered products
     srv.before ('CREATE', 'Orders', async (req) => {
       const order = req.data
-      if (!order.amount || order.amount <= 0)  return req.error (400, 'Order at least 1 book')
+      if (!order.amount || order.amount <= 0)  return req.error (400, 'Order at least 1 product')
       const tx = cds.transaction(req)
       const affectedRows = await tx.run (
         UPDATE (Products)

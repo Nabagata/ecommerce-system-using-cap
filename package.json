@@ -2,7 +2,7 @@
   "name": "ecommerce-system",
   "version": "1.0.0",
   "description": "A simple CAP project.",
-  "repository": "<Add your repository here>",
+  "repository": "https://github.com/Nabagata/ecommerce-system-using-cap",
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
@@ -18,10 +18,7 @@
   "cds": {
     "requires": {
       "db": {
-        "kind": "sqlite",
-        "credentials": {
-          "database": "db/ecommerce-system.db"
-        }
+        "kind": "sql"
       }
     }
   }
