@@ -17,7 +17,6 @@ entity Customers {
 entity Orders : managed {
   key ID  : UUID;
   product : Association to Products;
-  customer: Association to Customers;
   country : Country;
   amount  : Integer;
 }
