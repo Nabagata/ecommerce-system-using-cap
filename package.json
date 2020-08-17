@@ -6,7 +6,8 @@
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
-    "@sap/cds": "^3.34.3",
+    "@sap/cds": "^3",
+    "@sap/hana-client": "^2.5.105",
     "express": "^4"
   },
   "scripts": {
@@ -19,6 +20,9 @@
     "requires": {
       "db": {
         "kind": "sql"
+      },
+      "uaa": {
+        "kind": "xsuaa"
       }
     }
   }
