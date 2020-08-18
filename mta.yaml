@@ -13,8 +13,8 @@ build-parameters:
   before-all:
    - builder: custom
      commands:
-      - npm install --production
-      - npx -p @sap/cds-dk cds build --production
+      - npm install
+      - npx cds build
 
 modules:
  # --------------------- SERVER MODULE ------------------------
@@ -48,11 +48,11 @@ resources:
  # services extracted from CAP configuration
  # 'service-plan' can be configured via 'cds.requires.<name>.vcap.plan'
 # ------------------------------------------------------------
- - name: ecommerce-system-db-hdi-container
+ - name: ecommerce-system-db
 # ------------------------------------------------------------
    type: com.sap.xs.hdi-container
    parameters:
-     service: hana  # or 'hanatrial' on trial landscapes
+     service: hanatrial  # or 'hanatrial' on trial landscapes
      service-plan: hdi-shared
    properties:
      hdi-service-name: ${service-name}

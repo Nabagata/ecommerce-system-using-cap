@@ -8,10 +8,13 @@
   "dependencies": {
     "@sap/cds": "^3",
     "@sap/hana-client": "^2.5.105",
-    "express": "^4"
+    "express": "^4",
+    "passport": "^0.4.1",
+    "hdb": "^0.17.1"
   },
   "scripts": {
-    "start": "npx cds run"
+    "start": "npx cds run",
+    "watch": "cds watch"
   },
   "devDependencies": {
     "sqlite3": "^5.0.0"
@@ -19,7 +22,7 @@
   "cds": {
     "requires": {
       "db": {
-        "kind": "sql"
+        "kind": "hana"
       },
       "uaa": {
         "kind": "xsuaa"
